@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CacheHelper</id>
+    <version>2.0.0.1000</version>
+    <!--改上面的版本号的时候顺便把下面的也改了就可以直接复制到项目路径上执行了-->
+    <!-- nuget pack CacheHelper.nuspec -->
+    <title>Cachehelper</title>
+    <authors>alun</authors>
+    <owners>alun</owners>
+    <licenseUrl>http://192.168.3.233/share/CacheHelper/blob/master/CacheHelper/README.md</licenseUrl>
+    <projectUrl>http://192.168.3.233/share/CacheHelper.git</projectUrl>
+    <iconUrl>https://wx.qlogo.cn/mmopen/OnCjpMoow0P92MYCzaPR9ia4ly8EbUHku9WpvuMAkGO5xxaBibPeZlYqMmU81gicURhy6QyhEYOt8BsCkRfnYOI1mcVDUEMfNzO/0</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CacheHelper</description>
+    <releaseNotes>更新</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>公共包</tags>
+  </metadata>
+</package>
