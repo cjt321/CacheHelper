@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CacheHelper</id>
-    <version>2.0.0.1000</version>
+    <version>2.0.3</version>
     <!--改上面的版本号的时候顺便把下面的也改了就可以直接复制到项目路径上执行了-->
     <!-- nuget pack CacheHelper.nuspec -->
     <title>Cachehelper</title>
@@ -10,7 +10,7 @@
     <owners>alun</owners>
     <licenseUrl>https://github.com/cjt321/CacheHelper/README.md</licenseUrl>
     <projectUrl>https://github.com/cjt321/CacheHelper</projectUrl>
-    <iconUrl>https://wx.qlogo.cn/mmopen/OnCjpMoow0P92MYCzaPR9ia4ly8EbUHku9WpvuMAkGO5xxaBibPeZlYqMmU81gicURhy6QyhEYOt8BsCkRfnYOI1mcVDUEMfNzO/0</iconUrl>
+    <iconUrl>https://maotaiprice.oss-cn-hangzhou.aliyuncs.com/qinrenxuan/20201105141522.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>CacheHelper</description>
     <releaseNotes>更新</releaseNotes>
