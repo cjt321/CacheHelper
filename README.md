@@ -18,4 +18,4 @@ CacheHelper类库说明
 
  
 三、注意点
-1.  使用Mecached删除时若缓存已经不存在会返回false，redis和cache会返回true
+1.  使用Mecached删除时若缓存已经不存在会返回false，redis和cache会返回true 
