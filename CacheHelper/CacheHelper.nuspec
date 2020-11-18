@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CacheHelper</id>
-    <version>2.0.3</version>
+    <version>2.1.0</version>
     <!--改上面的版本号的时候顺便把下面的也改了就可以直接复制到项目路径上执行了-->
     <!-- nuget pack CacheHelper.nuspec -->
     <title>Cachehelper</title>

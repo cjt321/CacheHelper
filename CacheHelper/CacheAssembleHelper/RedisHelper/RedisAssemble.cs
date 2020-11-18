@@ -263,6 +263,30 @@ namespace CacheHelper.CacheAssembleHelper.RedisHelper
             return await Do(db => db.KeyExistsAsync(key));
         }
 
+        /// <summary>
+        /// 增加
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public async Task<long> IncreaseAsync(string key, int value = 1)
+        {
+            key = AddSysCustomKey(key);
+            return await Do(db => db.StringIncrementAsync(key, value));
+        }
+
+        /// <summary>
+        /// 减少
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public async Task<long> DecreaseAsync(string key, int value = 1)
+        {
+            key = AddSysCustomKey(key);
+            return await Do(db => db.StringDecrementAsync(key, value));
+        }
+
         #endregion
 
         #endregion
@@ -473,6 +497,32 @@ namespace CacheHelper.CacheAssembleHelper.RedisHelper
             key = AddSysCustomKey(key);
             return Do(db => db.KeyExists(key));
         }
+
+        /// <summary>
+        /// 增加
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public long Increase(string key, int value = 1)
+        {
+            key = AddSysCustomKey(key);
+            return Do(db => db.StringIncrement(key, value));
+        }
+
+        /// <summary>
+        /// 减少
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public long Decrease(string key, int value = 1)
+        {
+            key = AddSysCustomKey(key);
+            return Do(db => db.StringDecrement(key, value));
+        }
+
+        
 
         #endregion
 

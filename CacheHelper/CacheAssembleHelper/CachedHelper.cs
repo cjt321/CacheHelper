@@ -198,6 +198,36 @@ namespace CacheHelper.CacheAssembleHelper
             return await cache.ExistsAsync(key);
         }
 
+        /// <summary>
+        /// 增加
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="cacheType"></param>
+        /// <returns></returns>
+        public static async Task<long> IncreaseAsync(string key, int value = 1, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.IncreaseAsync(key, value);
+        }
+
+        /// <summary>
+        /// 减少
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="cacheType"></param>
+        /// <returns></returns>
+        public static async Task<long> DecreaseAsync(string key, int value = 1, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.DecreaseAsync(key, value);
+        }
+
         #endregion
 
         #endregion
@@ -383,6 +413,36 @@ namespace CacheHelper.CacheAssembleHelper
             ICacheAssemble cache = GetCache(cacheType);
 
             return cache.Exists(key);
+        }
+
+        /// <summary>
+        /// 增加
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="cacheType"></param>
+        /// <returns></returns>
+        public static long Increase(string key, int value=1, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return cache.Increase(key, value);
+        }
+
+        /// <summary>
+        /// 减少
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="cacheType"></param>
+        /// <returns></returns>
+        public static long Decrease(string key, int value = 1, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return cache.Decrease(key, value);
         }
 
         #endregion

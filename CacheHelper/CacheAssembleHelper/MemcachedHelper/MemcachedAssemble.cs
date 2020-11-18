@@ -493,6 +493,26 @@ namespace CacheHelper.CacheAssembleHelper.MemcachedHelper
             return result != null;
         }
 
+        public long Increase(string key, int value = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public long Decrease(string key, int value = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> IncreaseAsync(string key, int value = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> DecreaseAsync(string key, int value = 1)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
 

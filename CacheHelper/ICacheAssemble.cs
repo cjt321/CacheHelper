@@ -188,6 +188,14 @@ namespace CacheHelper
         /// <returns></returns>
         bool Exists(string key);
 
+        long Increase(string key, int value = 1);
+
+        long Decrease(string key, int value = 1);
+
+        Task<long> IncreaseAsync(string key, int value = 1);
+
+        Task<long> DecreaseAsync(string key, int value = 1);
+
         #endregion
 
 
