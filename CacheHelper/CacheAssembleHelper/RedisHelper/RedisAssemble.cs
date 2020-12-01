@@ -289,6 +289,40 @@ namespace CacheHelper.CacheAssembleHelper.RedisHelper
             return ConvertObj<T>(value);
         }
 
+        public async Task<long> ListRemoveStringAsync(string key, string value)
+        {
+            key = AddSysCustomKey(key);
+            return await Do(db => db.ListRemoveAsync(key, value));
+        }
+
+        public async Task<List<string>> ListRangeStringAsync(string key)
+        {
+            key = AddSysCustomKey(key);
+            var values = await Do(redis => redis.ListRangeAsync(key));
+
+            List<string> result = new List<string>();
+            foreach (var item in values)
+            {
+                var model = (string)(item);
+                result.Add(model);
+            }
+
+            return result;
+        }
+
+        public async Task<long> ListRightPushStringAsync(string key, string value)
+        {
+            key = AddSysCustomKey(key);
+            return await Do(db => db.ListRightPushAsync(key, value));
+        }
+
+        public async Task<string> ListRightPopStringAsync(string key)
+        {
+            key = AddSysCustomKey(key);
+            var value = await Do(redis => redis.ListRightPopAsync(key));
+            return value;
+        }
+
         /// <summary>
         /// 增加
         /// </summary>

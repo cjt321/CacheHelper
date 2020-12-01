@@ -271,6 +271,26 @@ namespace CacheHelper.CacheAssembleHelper.WebCacheHelper
             throw new NotImplementedException();
         }
 
+        public Task<long> ListRemoveStringAsync(string key, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<string>> ListRangeStringAsync(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> ListRightPushStringAsync(string key, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> ListRightPopStringAsync(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
 

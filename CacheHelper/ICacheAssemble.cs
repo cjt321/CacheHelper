@@ -105,6 +105,14 @@ namespace CacheHelper
         Task<long> ListRightPushAsync<T>(string key, T value);
 
         Task<T> ListRightPopAsync<T>(string key);
+        Task<long> ListRemoveStringAsync(string key, string value);
+
+        Task<List<string>> ListRangeStringAsync(string key);
+
+        Task<long> ListRightPushStringAsync(string key, string value);
+
+        Task<string> ListRightPopStringAsync(string key);
+
 
         #endregion
 

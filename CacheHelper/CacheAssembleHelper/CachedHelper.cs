@@ -102,6 +102,13 @@ namespace CacheHelper.CacheAssembleHelper
 
             return await cache.GetAsync<T>(key);
         }
+        /*public static async Task<T> GetStringAsync<T>(string key, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.GetStringAsync(key);
+        }*/
 
         /// <summary>
         /// 查询对象缓存
@@ -214,6 +221,38 @@ namespace CacheHelper.CacheAssembleHelper
             ICacheAssemble cache = GetCache(cacheType);
 
             return await cache.ListRightPopAsync<T>(key);
+        }
+
+        public static async Task<long> ListRemoveStringAsync(string key, string value, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRemoveStringAsync(key, value);
+        }
+
+        public static async Task<List<string>> ListRangeStringAsync(string key, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRangeStringAsync(key);
+        }
+
+        public static async Task<long> ListRightPushStringAsync(string key, string value, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRightPushStringAsync(key, value);
+        }
+
+        public static async Task<string> ListRightPopStringAsync(string key, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRightPopStringAsync(key);
         }
 
         #endregion
