@@ -98,6 +98,14 @@ namespace CacheHelper
         /// <returns></returns>
         Task<bool> ExistsAsync(string key);
 
+        Task<long> ListRemoveAsync<T>(string key, T value);
+
+        Task<List<T>> ListRangeAsync<T>(string key);
+
+        Task<long> ListRightPushAsync<T>(string key, T value);
+
+        Task<T> ListRightPopAsync<T>(string key);
+
         #endregion
 
         #region 同步

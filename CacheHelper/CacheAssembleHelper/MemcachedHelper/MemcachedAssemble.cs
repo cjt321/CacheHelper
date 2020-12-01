@@ -264,6 +264,26 @@ namespace CacheHelper.CacheAssembleHelper.MemcachedHelper
             return await Task.FromResult(result != null);
         }
 
+        public Task<long> ListRemoveAsync<T>(string key, T value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<T>> ListRangeAsync<T>(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<long> ListRightPushAsync<T>(string key, T value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T> ListRightPopAsync<T>(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         #endregion
