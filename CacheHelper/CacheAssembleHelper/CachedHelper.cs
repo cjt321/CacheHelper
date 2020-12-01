@@ -182,6 +182,42 @@ namespace CacheHelper.CacheAssembleHelper
 
         #endregion
 
+        #region list
+
+        public static async Task<long> ListRemoveAsync<T>(string key, T value, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRemoveAsync(key, value);
+        }
+
+        public static async Task<List<T>> ListRangeAsync<T>(string key, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRangeAsync<T>(key);
+        }
+
+        public static async Task<long> ListRightPushAsync<T>(string key, T value, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRightPushAsync<T>(key, value);
+        }
+
+        public static async Task<T> ListRightPopAsync<T>(string key, CacheEnum cacheType = 0)
+        {
+            cacheType = GetCacheType(cacheType);
+            ICacheAssemble cache = GetCache(cacheType);
+
+            return await cache.ListRightPopAsync<T>(key);
+        }
+
+        #endregion
+
         #region Other
 
         /// <summary>
